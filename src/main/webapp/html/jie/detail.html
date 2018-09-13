@@ -1,0 +1,255 @@
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>日志详情</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="hellotime,微博,社交">
+  <meta name="description" content="hellotime是一个社交微博平台">
+  <link rel="stylesheet" href="../../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../../res/css/global.css">
+</head>
+<body>
+
+<div class="fly-header layui-bg-black">
+  <div class="layui-container">
+    <a class="fly-logo" href="/">
+      <img src="../../res/images/hellotime_logo2.png" alt="layui">
+    </a>
+    
+    <ul class="layui-nav fly-nav-user">
+      
+      <!-- 未登入的状态 -->
+      <!--
+      <li class="layui-nav-item">
+        <a class="iconfont icon-touxiang layui-hide-xs" href="user/login.html"></a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="user/login.html">登入</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="user/reg.html">注册</a>
+      </li>
+      <li class="layui-nav-item layui-hide-xs">
+        <a href="/app/qq/" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" title="QQ登入" class="iconfont icon-qq"></a>
+      </li>
+      <li class="layui-nav-item layui-hide-xs">
+        <a href="/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})" title="微博登入" class="iconfont icon-weibo"></a>
+      </li>
+       -->
+      
+      <!-- 登入后的状态 -->
+      <li class="layui-nav-item">
+        <a class="fly-nav-avatar" href="javascript:;">
+          <cite class="layui-hide-xs">蔡泽鑫</cite>
+          <img src="../../res/images/avatar/8.jpg">
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="../user/set.html"><i class="layui-icon">&#xe620;</i>基本设置</a></dd>
+          <dd><a href="../user/message.html"><i class="iconfont icon-tongzhi" style="top: 4px;"></i>我的消息</a></dd>
+          <dd><a href="../user/home.html"><i class="layui-icon" style="margin-left: 2px; font-size: 22px;">&#xe68e;</i>我的主页</a></dd>
+          <hr style="margin: 5px 0;">
+          <dd><a href="" style="text-align: center;">退出</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="layui-hide-xs">
+  <div class="fly-panel fly-column">
+    <div class="layui-container">
+      <ul class="layui-clear">
+        <li class="layui-hide-xs"><a href="/">首页</a></li> 
+        <li class="layui-this"><a href="">我的主页</a></li> 
+        <li class="layui-hide-xs layui-hide-sm layui-show-md-inline-block"><span class="fly-mid"></span></li> 
+        
+        <!-- 用户登入后显示 -->
+      </ul> 
+      
+      <div class="fly-column-right layui-hide-xs"> 
+        <span class="fly-search"><i class="layui-icon"></i></span> 
+        <a href="add.html" class="layui-btn">发表新帖</a> 
+      </div> 
+      <div class="layui-hide-sm layui-show-xs-block" style="margin-top: -10px; padding-bottom: 10px; text-align: center;"> 
+        <a href="add.html" class="layui-btn">发表新帖</a> 
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div class="layui-container">
+  <div class="layui-row layui-col-space15">
+    <div class="layui-col-md8 content detail">
+      <div class="fly-panel detail-box">
+        <h1>HelloTime平台 日志详情页面</h1>
+        <div class="detail-about">
+          <a class="fly-avatar" href="../user/home.html">
+            <img src="../../res/images/avatar/8.jpg" alt="蔡泽鑫">
+          </a>
+          <div class="fly-detail-user">
+            <a href="../user/home.html" class="fly-link">
+              <cite>蔡泽鑫</cite>
+            </a>
+            <span>发布时间：2018-09-07</span>
+          </div>
+          <div class="detail-hits" id="LAY_jieAdmin" data-id="123">
+            <span class="layui-btn layui-btn-xs jie-admin" type="edit"><a href="add.html">编辑日志</a></span>
+          </div>
+        </div>
+        <div class="detail-body photos">
+          <p>日志正文1</p>
+          <p>日志正文2</p>
+          <p>
+            <img src="../../res/images/hellotime_logo.png" alt="hellotime">
+          </p>
+        </div>
+      </div>
+
+      <div class="fly-panel detail-box" id="flyReply">
+        <fieldset class="layui-elem-field layui-field-title" style="text-align: center;">
+          <legend>回帖内容</legend>
+        </fieldset>
+
+        <ul class="jieda" id="jieda">
+          <li data-id="111" class="jieda-daan">
+            <a name="item-1111111111"></a>
+            <div class="detail-about detail-about-reply">
+              <a class="fly-avatar" href="">
+                <img src="../../res/images/avatar/2.jpg" alt="何启文">
+              </a>
+              <div class="fly-detail-user">
+                <a href="" class="fly-link">
+                  <cite>何启文</cite>          
+                </a>
+
+              </div>
+
+              <div class="detail-hits">
+                <span>2018-09-07</span>
+              </div>
+            </div>
+            <div class="detail-body jieda-body photos">
+              <p>蔡瑶海是大傻逼</p>
+            </div>
+            <div class="jieda-reply">
+              
+              <span type="reply">
+                <i class="iconfont icon-svgmoban53"></i>
+                回复
+              </span>
+              <div class="jieda-admin">
+                <span type="edit">编辑</span>
+                <span type="del">删除</span>
+              </div>
+            </div>
+          </li>
+          
+          <li data-id="111">
+            <a name="item-1111111111"></a>
+            <div class="detail-about detail-about-reply">
+              <a class="fly-avatar" href="">
+                <img src="../../res/images/avatar/1.jpg" alt=" ">
+              </a>
+              <div class="fly-detail-user">
+                <a href="" class="fly-link">
+                  <cite>蔡瑶海</cite>       
+                </a>
+              </div>
+              <div class="detail-hits">
+                <span>2018-09-07</span>
+              </div>
+            </div>
+            <div class="detail-body jieda-body photos">
+              <p>我爱何启文</p>
+            </div>
+            <div class="jieda-reply">
+              <span type="reply">
+                <i class="iconfont icon-svgmoban53"></i>
+                回复
+              </span>
+              <div class="jieda-admin">
+                <span type="edit">编辑</span>
+                <span type="del">删除</span>
+              </div>
+            </div>
+          </li>
+          
+          <!-- 无数据时 -->
+          <!-- <li class="fly-none">消灭零回复</li> -->
+        </ul>
+        
+        <div class="layui-form layui-form-pane">
+          <form action="/jie/reply/" method="post">
+            <div class="layui-form-item layui-form-text">
+              <a name="comment"></a>
+              <div class="layui-input-block">
+                <textarea id="L_content" name="content" required lay-verify="required" placeholder="请输入内容"  class="layui-textarea fly-editor" style="height: 150px;"></textarea>
+              </div>
+            </div>
+            <div class="layui-form-item">
+              <input type="hidden" name="jid" value="123">
+              <button class="layui-btn" lay-filter="*" lay-submit>提交回复</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="layui-col-md4">
+      
+
+      <div class="fly-panel">
+        <div class="fly-panel-title">
+          广告区域
+        </div>
+        <div class="fly-panel-main">
+          <a href="http://layim.layui.com/?from=fly" target="_blank" class="fly-zanzhu" time-limit="2017.09.25-2099.01.01" style="background-color: #5FB878;">黄金广告位，扫描二维码联系我们</a>
+        </div>
+      </div>
+
+      <div class="fly-panel" style="padding: 20px 0; text-align: center;">
+        <img src="../../res/images/code.jpg" style="max-width: 100%;" alt="layui">
+        <p style="position: relative; color: #666;">微信扫码关注 HelloTime平台 公众号</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="fly-footer">
+  <p><a >HelloTime</a> 2018 &copy; <a >大牛公司 出品</a></p>
+  <p>时间是永恒的见证者！欢迎使用HelloTime！</p>
+</div>
+
+<script src="../../res/layui/layui.js"></script>
+<script>
+layui.cache.page = 'jie';
+layui.cache.user = {
+  username: '游客'
+  ,uid: -1
+  ,avatar: '../../res/images/avatar/00.jpg'
+  ,experience: 83
+  ,sex: '男'
+};
+layui.config({
+  version: "3.0.0"
+  ,base: '../../res/mods/'
+}).extend({
+  fly: 'index'
+}).use(['fly', 'face'], function(){
+  var $ = layui.$
+  ,fly = layui.fly;
+  //如果你是采用模版自带的编辑器，你需要开启以下语句来解析。
+  /*
+  $('.detail-body').each(function(){
+    var othis = $(this), html = othis.html();
+    othis.html(fly.content(html));
+  });
+  */
+});
+</script>
+
+</body>
+</html>

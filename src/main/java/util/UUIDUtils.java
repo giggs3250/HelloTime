@@ -1,0 +1,12 @@
+package util;
+
+import java.util.UUID;
+
+public class UUIDUtils {
+	public static String getUUID() {
+		String uuid = UUID.randomUUID().toString(); 
+		//去掉“-”符号 
+		String uid = uuid.replaceAll("-", "");
+		return uid;
+	}
+}
